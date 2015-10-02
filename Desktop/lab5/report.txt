@@ -1,0 +1,15 @@
+Joey Rader - jcrader
+
+1.) Three connections were required to communicate over UART.
+
+2.) The purpose of the alternate functions were so we could take a function as 
+    an input and return that specific function's output.
+
+3.) Baud rate is the speed that information is transfered in a specific channel
+
+4.) We need newlib_stubs so we can access the standard C library. Without it,
+    we can only use the functions that the arm recognizes.
+
+I learned how to use the UART along with the Logic Analyzer. We had difficulty
+with getting serialT to run, but once we readjusted how our wires were setup,
+we were able to get it working. 
