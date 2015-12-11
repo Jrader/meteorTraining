@@ -1,0 +1,13 @@
+/**********************************************
+ * draw.h
+ *
+ * Created by: Joey Rader (jcrader) & Di Zhong (dizhong)
+ * Created on: 12/4/2015
+ * Last updated on: 12/4/2015
+ * Part of: Final Project
+ **********************************************/
+
+
+extern void draw_crosshair(int16_t x, int16_t y);
+extern void erase_crosshair(int16_t x, int16_t y);
+extern void draw_target(uint8_t x, uint8_t y);

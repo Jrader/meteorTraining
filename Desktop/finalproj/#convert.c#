@@ -1,0 +1,29 @@
+int i;
+FILE* f = fopen(filename, "rb");
+unsigned char info[54];
+int main(){
+fread(info, sizeof(unsigned char), 54, f); // read the 54-byte header
+
+int width = 320, height = 240; // might want to extract that info from BMP header instead
+
+int size_in_file = 2 * width * height;
+unsigned char* data_from_file = new unsigned char[size_in_file];
+fread(data_from_file, sizeof(unsigned char), size_in_file, f); // read the rest
+fclose(f);
+
+unsigned char pixels[240 * 320][3];
+
+for(i = 0; i < width * height; ++i)
+{
+    unsigned char temp0 = data_from_file[i * 2 + 0];
+    unsigned char temp1 = data_from_file[i * 2 + 1];
+    unsigned pixel_data = temp1 << 8 | temp0;
+
+    // Extract red, green and blue components from the 16 bits
+    pixels[i][0] = pixel_data >> 11;
+    pixels[i][1] = (pixel_data >> 5) & 0x3f;
+    pixels[i][2] = pixel_data & 0x1f;
+}
+
+printf
+  }

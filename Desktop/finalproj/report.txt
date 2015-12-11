@@ -1,0 +1,13 @@
+Final Project
+Joey Rader- jcrader
+Di Zhong- dizhong
+
+The core functionality of the game is to move the cursor around on the screen
+to shoot the square. As time decreases, the more points you're going to 
+receive for hitting the square. There is also a end game screen that displays
+a high score and allows you to play again if you want to. I handled most of 
+the nunchuk movement and initial screen display. Di handled the sounds, 
+modified screen displays, and high score display. The main problem we had was
+with bmp images. We ended up just mannually drawing everything we needed since
+we couldn't get them to load properly. If I could start the project over, 
+I would put more time into getting the bmp images to load properly. 
